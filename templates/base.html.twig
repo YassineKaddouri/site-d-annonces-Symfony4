@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+
+        <meta charset="UTF-8">
+
+        <title> Symfony -{% block title %}Welcome!{% endblock %}</title>
+             <link rel="stylesheet" href="/css/Bootstrap.min.css">
+             <link rel="stylesheet" href="/css/Style.css">
+
+
+        {% endblock %}
+
+    </head>
+    <body>
+
+{% include 'partials/header.html.twig' %}
+        {% block body %}
+
+
+        {% endblock %}
+{% include 'partials/footer.html.twig' %}
+      <script src="/Jquery/jquery.js" ></script>
+    <script src="/js/Bootstrap.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+
+
+    {% block javascripts %}
+        {#{{ encore_entry_script_tags('app') }}#}
+    {% endblock %}
+    </body>
+</html>

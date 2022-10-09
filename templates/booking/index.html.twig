@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Reservation l'annoce:{{ ad.title }}!{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Reservation pour l'annonce :{{ ad.title }}</h1>
+        <p> Vous ete sur le point de reservation le bien de <strong>{{ ad.author.getfullName }}</strong> diytes nous tout on s occup du rest</p>
+
+        {{ form_start(forn) }}
+        <div class="alert alert-light">
+            commencer par nous dir quelles sont les dates qui vous interessent
+            <div class="row">
+                <div class="col">
+                    {{ form_row(form.starDate) }}
+                </div>
+                <div class="col">
+                    {{ form_row(form.endDate) }}
+                </div>
+        </div>
+            <h4>Montant du sejour :<span id="amount"></span>&euro</h4>
+            <span id="days">0</span>nuit(s) a {{ ad.price }}/nuit
+            {{ form_end(form) }}
+    </div>
+<
+{% endblock %}
